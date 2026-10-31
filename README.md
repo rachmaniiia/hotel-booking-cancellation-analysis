@@ -2,8 +2,8 @@
 
 Analysis of 119,390 hotel bookings (City Hotel and Resort Hotel) to understand what drives cancellations: business process modelling (BPMN), data cleaning and EDA in Python, SQL analysis, and A/B testing.
 
-> Group project from the Data Analytics for Business mid-term exam (Bitlabs Academy x Kampus Merdeka, 2024). Team: Rachmania Istiqomah Kelilauw and Nadhilla Asfy Putri.
-> **My contribution:** [FILL IN: the parts you worked on, e.g. data cleaning, SQL queries, EDA]
+> Group project from the Data Analytics for Business mid-term exam (Bitlabs Academy x Kampus Merdeka, 2024), completed in a team of two.
+> **My contribution:** data cleaning, EDA, A/B Testing
 
 ## Business problem
 
