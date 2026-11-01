@@ -75,6 +75,7 @@ Every finding keeps its direction: cancellation rate still rises with lead time,
 - ADR values of 0 or below were excluded from the A/B test.
 - Mann-Whitney U compares the whole ADR distribution, not only the means.
 - Cancellation rates describe patterns, not causes.
+- Deposit type was not analysed in this version.
 
 ## Repository structure
 
