@@ -1,9 +1,9 @@
 # Hotel Booking Cancellation Analysis
 
-Analysis of 119,390 hotel bookings (City Hotel and Resort Hotel) to understand what drives cancellations: business process modelling (BPMN), data cleaning and EDA in Python, SQL analysis, and A/B testing.
+Analysis of 119,390 hotel bookings (City Hotel and Resort Hotel) to understand what drives cancellations: business process modelling (BPMN), data cleaning and EDA in Python, SQL analysis, and Hypothesis Testing.
 
 > Group project from the Data Analytics for Business mid-term exam (Bitlabs Academy x Kampus Merdeka, 2024), completed in a team of two.
-> **My contribution:** data cleaning, EDA, A/B Testing
+> **My contribution:** data cleaning and EDA in Python, Hypothesis Testing
 
 ## Business problem
 
@@ -40,7 +40,8 @@ Every finding keeps its direction: cancellation rate still rises with lead time,
 
 ## Recommendations
 
-- Require a deposit or offer a discounted non-refundable rate for bookings made far in advance, especially above 120 days.
+- Pilot reconfirmation requests for bookings made 90+ days ahead and measure the change in cancellation rate. The data shows where cancellations concentrate but cannot show which measure works, so a controlled pilot is the right next step.
+- Build expected-cancellation rates by lead-time band (18.5% for 0-30 days up to 52.2% for 120+ days) into occupancy forecasts and room planning, so long-lead bookings are counted at a discount rather than as certain revenue.
 - Apply market-specific policies for high-cancellation countries such as Portugal, Brazil, and Italy.
 - Use seasonal pricing for Resort Hotel around its August peak and run targeted offers for City Hotel in low-demand months.
 
@@ -57,7 +58,7 @@ Every finding keeps its direction: cancellation rate still rises with lead time,
 | Process modelling | Bizagi Modeler (BPMN) | Booking process with four actors: customer, receptionist, room service, administration (see `diagram/`) |
 | Cleaning and EDA | Python (pandas, matplotlib, seaborn) in Google Colab | Missing and inconsistent values, EDA by lead time, hotel, country, and month |
 | SQL analysis | SQL via pandasql | CTEs and CASE WHEN on cancellations, lead time, and ADR (see `sql/`) |
-| A/B testing | scipy | Normality check (Shapiro-Wilk), then Mann-Whitney U for ADR |
+| Hypothesis Testing | scipy | Normality check (Shapiro-Wilk), then Mann-Whitney U for ADR |
 
 ## Data cleaning decisions
 
@@ -79,7 +80,7 @@ Every finding keeps its direction: cancellation rate still rises with lead time,
 
 ```
 hotel-booking-cancellation-analysis/
-├── notebook/    Python cleaning, SQL, EDA, A/B testing (Colab notebook)
+├── notebook/    Python cleaning, SQL, EDA, Hypothesis Testing (Colab notebook)
 ├── sql/         the four SQL queries used in the analysis
 ├── diagram/     BPMN diagram of the booking process
 └── README.md
